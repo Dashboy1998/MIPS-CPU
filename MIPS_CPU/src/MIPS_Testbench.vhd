@@ -10,12 +10,14 @@ architecture test of MIPS_Testbench is
     port(CLK, RST: in std_logic; 
          CS, WE: out std_logic;
          ADDR: out unsigned (31 downto 0);
-         Mem_Bus: inout unsigned(31 downto 0));
+         Mem_Data_Write: out unsigned(31 downto 0);
+	   	 Mem_Data_Read: in unsigned(31 downto 0));
   end component;
   component Memory
     port(CS, WE, CLK: in std_logic;
          ADDR: in unsigned(31 downto 0);
-         Mem_Bus: inout unsigned(31 downto 0));
+         Mem_Data_Write: in unsigned(31 downto 0); 
+	   	 Mem_Data_Read: out unsigned(31 downto 0));
   end component;
   
   constant N: integer := 8;
@@ -59,11 +61,11 @@ architecture test of MIPS_Testbench is
   type output_arr is array(1 to N) of integer;
   constant expected: output_arr:= (24, 12, 2, 22, 1, 288, 3, 4268066);
   signal CS, WE, CLK: std_logic := '0';
-  signal Mem_Bus, Address, AddressTB, Address_Mux: unsigned(31 downto 0);
+  signal Mem_Data_Write, Mem_Data_Read, Address, AddressTB, Address_Mux: unsigned(31 downto 0);
   signal RST, init, WE_Mux, CS_Mux, WE_TB, CS_TB: std_logic;
 begin
-  CPU: MIPS port map (CLK, RST, CS, WE, Address, Mem_Bus);
-  MEM: Memory port map (CS_Mux, WE_Mux, CLK, Address_Mux, Mem_Bus);
+  CPU: MIPS port map (CLK, RST, CS, WE, Address, Mem_Data_Write, Mem_Data_Read);
+  MEM: Memory port map (CS_Mux, WE_Mux, CLK, Address_Mux, Mem_Data_Write, Mem_Data_Read);
 
   CLK <= not CLK after 10 ns;
   Address_Mux <= AddressTB when init = '1' else Address; 
@@ -81,10 +83,10 @@ begin
     for i in 1 to W loop
       wait until CLK = '1' and CLK'event;
       AddressTB <= to_unsigned(i-1,32);
-      Mem_Bus <= Instr_List(i);
+      Mem_Data_Write <= Instr_List(i);
     end loop; 
     wait until CLK = '1' and CLK'event;
-    Mem_Bus <= "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ";
+    Mem_Data_Write <= "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ";
     CS_TB <= '0'; WE_TB <= '0';
     init <= '0';
     wait until CLK = '1' and CLK'event;
