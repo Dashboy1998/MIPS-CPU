@@ -44,23 +44,29 @@ Active_lib=
 [IMPLEMENTATION]
 UCF=
 
-[Files.Data]
-.\src\Complete_MIPS.vhd=VHDL Source Code
-.\src\Memory.vhd=VHDL Source Code
-.\src\MIPS.vhd=VHDL Source Code
-.\src\REG.vhd=VHDL Source Code
-.\src\MIPS_Testbench.vhd=VHDL Source Code
+[SpecTracer]
+WindowVisible=0
+
+[HierarchyViewer]
+HierarchyInformation=complete_mips|model|0
+ShowHide=ShowTopLevel
+Selected=
 
 [Files]
 /Memory.vhd=-1
 /REG.vhd=-1
 /MIPS.vhd=-1
 /Complete_MIPS.vhd=-1
-/MIPS_Testbench.vhd=-1
+Testbench/MIPS_Testbench.vhd=-1
 
-[SpecTracer]
-WindowVisible=0
-[HierarchyViewer]
-HierarchyInformation=complete_mips|model|0 
-ShowHide=ShowTopLevel
-Selected=
+[Files.Data]
+.\src\Memory.vhd=VHDL Source Code
+.\src\REG.vhd=VHDL Source Code
+.\src\MIPS.vhd=VHDL Source Code
+.\src\Complete_MIPS.vhd=VHDL Source Code
+.\src\MIPS_Testbench.vhd=VHDL Source Code
+.\src\Testbench\MIPS_Testbench.vhd=VHDL Source Code
+
+[Groups]
+Testbench=1
+
