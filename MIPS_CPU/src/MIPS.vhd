@@ -6,7 +6,8 @@ entity MIPS is
   port(CLK, RST: in std_logic; 
        CS, WE: out std_logic;
        ADDR: out unsigned (31 downto 0);
-       Mem_Bus: inout unsigned(31 downto 0));
+       Mem_Data_Write: out unsigned(31 downto 0); -- Data Write
+	   Mem_Data_Read: in unsigned(31 downto 0)); -- Data Read
 end MIPS;
 
 architecture structure of MIPS is
@@ -51,10 +52,9 @@ begin
     else Instr(20 downto 16);           -- Destination Register MUX (MUX1)
   ALU_InA <= ReadReg1;
   ALU_InB <= Imm_Ext when REGorIMM_Save = '1' else ReadReg2;   -- ALU MUX (MUX2)
-  Reg_in <= Mem_Bus when ALUorMEM_Save = '1' else ALU_Result_Save; -- Data MUX
+  Reg_in <= Mem_Data_Read when ALUorMEM_Save = '1' else ALU_Result_Save; -- Data MUX
   Format <= R when Opcode = 0 else J when Opcode = 2 else I;
-  Mem_Bus <= ReadReg2 when Writing = '1' else
-    "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ"; -- drive memory bus only during writes
+  Mem_Data_Write <= ReadReg2; -- Data to write to memory
   ADDR <= PC when FetchDorI = '1' else ALU_Result_Save; --ADDR Mux
 
   process(State, PC, Instr, Format, F_Code, opcode, Op, ALU_InA, ALU_InB,
@@ -132,7 +132,7 @@ begin
         State <= nState;
         PC <= nPC;
       end if;
-      if State = 0 then Instr <= Mem_Bus; end if;
+      if State = 0 then Instr <= Mem_Data_Read; end if;
       if State = 1 then
          OpSave <= Op; 
          REGorIMM_Save <= REGorIMM;
