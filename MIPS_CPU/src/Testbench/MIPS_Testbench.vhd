@@ -61,19 +61,22 @@ architecture test of MIPS_Testbench is
   type output_arr is array(1 to N) of integer;
   constant expected: output_arr:= (24, 12, 2, 22, 1, 288, 3, 4268066);
   signal CS, WE, CLK: std_logic := '0';
-  signal Mem_Data_Write, Mem_Data_Read, Address, AddressTB, Address_Mux: unsigned(31 downto 0);
+  signal Instr_to_Mem, CPU_Mem_Data_Write, Mem_Data_Write, Mem_Data_Read, Address, AddressTB, Address_Mux: unsigned(31 downto 0);
   signal RST, init, WE_Mux, CS_Mux, WE_TB, CS_TB: std_logic;
+  signal Write_Instruction: boolean;
 begin
-  CPU: MIPS port map (CLK, RST, CS, WE, Address, Mem_Data_Write, Mem_Data_Read);
+  CPU: MIPS port map (CLK, RST, CS, WE, Address, CPU_Mem_Data_Write, Mem_Data_Read);
   MEM: Memory port map (CS_Mux, WE_Mux, CLK, Address_Mux, Mem_Data_Write, Mem_Data_Read);
 
   CLK <= not CLK after 10 ns;
   Address_Mux <= AddressTB when init = '1' else Address; 
   WE_Mux <= WE_TB when init = '1' else WE;
   CS_Mux <= CS_TB when init = '1' else CS;
-
+  Mem_Data_Write <= Instr_to_Mem when Write_Instruction = TRUE else CPU_Mem_Data_Write; -- Allows for loading program
+	  
   process
   begin
+	Write_Instruction <= true;  
     rst <= '1';
     wait until CLK = '1' and CLK'event;
 
@@ -83,10 +86,10 @@ begin
     for i in 1 to W loop
       wait until CLK = '1' and CLK'event;
       AddressTB <= to_unsigned(i-1,32);
-      Mem_Data_Write <= Instr_List(i);
+      Instr_to_Mem <= Instr_List(i);
     end loop; 
     wait until CLK = '1' and CLK'event;
-    Mem_Data_Write <= "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ";
+    Write_Instruction <= false;
     CS_TB <= '0'; WE_TB <= '0';
     init <= '0';
     wait until CLK = '1' and CLK'event;
@@ -95,8 +98,8 @@ begin
     for i in 1 to N loop
       wait until WE = '1' and WE'event;  -- When a store word is executed
       wait until CLK = '0' and CLK'event;
-      assert(to_integer(Mem_Data_Read) = expected(i))
-        report "Output mismatch:" severity error;
+      assert(to_integer(CPU_Mem_Data_Write) = expected(i))
+	  	report "Output mismatch:" severity error;
     end loop;
 
     report "Testing Finished:";

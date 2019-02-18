@@ -48,9 +48,12 @@ UCF=
 WindowVisible=0
 
 [HierarchyViewer]
-HierarchyInformation=complete_mips|model|0
+HierarchyInformation=complete_mips|model|0 mips_testbench|test|0 
 ShowHide=ShowTopLevel
 Selected=
+
+[Groups]
+Testbench=1
 
 [Files]
 /Memory.vhd=-1
@@ -64,9 +67,5 @@ Testbench/MIPS_Testbench.vhd=-1
 .\src\REG.vhd=VHDL Source Code
 .\src\MIPS.vhd=VHDL Source Code
 .\src\Complete_MIPS.vhd=VHDL Source Code
-.\src\MIPS_Testbench.vhd=VHDL Source Code
 .\src\Testbench\MIPS_Testbench.vhd=VHDL Source Code
-
-[Groups]
-Testbench=1
 
