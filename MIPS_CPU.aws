@@ -1,0 +1,12 @@
+[Version]
+Version=10.5
+[Designs]
+mips_cpu=.\MIPS_CPU\MIPS_CPU.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+mips_cpu=1

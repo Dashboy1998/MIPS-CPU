@@ -1,0 +1,66 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=4
+Current Config=compile
+
+[Configurations]
+compile=MIPS_CPU
+
+[Library]
+MIPS_CPU=.\MIPS_CPU\MIPS_CPU.lib
+
+[Settings]
+AccessRead=0
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=1
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+RUN_MODE_SYNTH=0
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FLOWTOOLS=IMPL_WITH_SYNTH
+ON_SERVERFARM_SYNTH=0
+ON_SERVERFARM_IMPL=0
+ON_SERVERFARM_SIM=0
+DVM_DISPLAY=NO
+fileopenfolder=E:\Documents\School\2019 Spring\ECE_543\Labs\03\Lab_03\MIPS_CPU\MIPS_CPU\src
+
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=0
+
+[LocalVhdlSets]
+CompileWithDebug=1
+
+[$LibMap$]
+MIPS_CPU=.
+Active_lib=
+
+[IMPLEMENTATION]
+UCF=
+
+[Files.Data]
+.\src\Complete_MIPS.vhd=VHDL Source Code
+.\src\Memory.vhd=VHDL Source Code
+.\src\MIPS.vhd=VHDL Source Code
+.\src\REG.vhd=VHDL Source Code
+.\src\MIPS_Testbench.vhd=VHDL Source Code
+
+[Files]
+/Memory.vhd=-1
+/REG.vhd=-1
+/MIPS.vhd=-1
+/Complete_MIPS.vhd=-1
+/MIPS_Testbench.vhd=-1
+
+[SpecTracer]
+WindowVisible=0
+[HierarchyViewer]
+HierarchyInformation=complete_mips|model|0 
+ShowHide=ShowTopLevel
+Selected=
