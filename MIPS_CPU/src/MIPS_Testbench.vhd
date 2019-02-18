@@ -95,7 +95,7 @@ begin
     for i in 1 to N loop
       wait until WE = '1' and WE'event;  -- When a store word is executed
       wait until CLK = '0' and CLK'event;
-      assert(to_integer(Mem_Bus) = expected(i))
+      assert(to_integer(Mem_Data_Read) = expected(i))
         report "Output mismatch:" severity error;
     end loop;
 
