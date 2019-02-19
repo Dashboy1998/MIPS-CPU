@@ -18,7 +18,7 @@ architecture structure of MIPS is
          Reg_In: in unsigned(31 downto 0);
          ReadReg1, ReadReg2: out unsigned(31 downto 0));
   end component;
-  type Operation is (and1,or1,add,sub,slt,shr,shl,jr);
+  type Operation is (and1,or1,add,sub,slt,shr,shl,jr, mult, multu, div, divu, mfhi, mflo);
   signal Op, OpSave: Operation := and1;
   type Instr_Format is (R, I, J);  -- (Arithmetic, Addr_Imm, Jump)
   signal Format: Instr_Format := R;
@@ -79,7 +79,13 @@ begin
           elsif F_code = "101010" then Op <= slt;   -- set on less than
           elsif F_code = "000010" then Op <= shr;   -- shift right
           elsif F_code = "000000" then Op <= shl;   -- shift left
-          elsif F_code = "001000" then Op <= jr;    -- jump register
+          elsif F_code = "001000" then Op <= jr;    -- jump register 
+		  elsif F_code = "011000" then Op <= mult;  -- mult
+		  elsif F_code = "011001" then Op <= multu; -- multu
+		  elsif F_code = "011010" then Op <= div;   -- div
+		  elsif F_code = "011011" then Op <= divu;  -- divu
+		  elsif F_code = "010000" then Op <= mfhi;  -- mfhi
+		  elsif F_code = "010010" then Op <= mflo;  -- mflo
           end if;
         elsif Format = I then -- immediate instructions 
           REGorIMM <= '1'; 
