@@ -63,7 +63,6 @@ architecture test of MIPS_Testbench is
   signal CS, WE, CLK: std_logic := '0';
   signal Instr_to_Mem, CPU_Mem_Data_Write, Mem_Data_Write, Mem_Data_Read, Address, AddressTB, Address_Mux: unsigned(31 downto 0);
   signal RST, init, WE_Mux, CS_Mux, WE_TB, CS_TB: std_logic;
-  signal Write_Instruction: boolean;
 begin
   CPU: MIPS port map (CLK, RST, CS, WE, Address, CPU_Mem_Data_Write, Mem_Data_Read);
   MEM: Memory port map (CS_Mux, WE_Mux, CLK, Address_Mux, Mem_Data_Write, Mem_Data_Read);
@@ -72,11 +71,10 @@ begin
   Address_Mux <= AddressTB when init = '1' else Address; 
   WE_Mux <= WE_TB when init = '1' else WE;
   CS_Mux <= CS_TB when init = '1' else CS;
-  Mem_Data_Write <= Instr_to_Mem when Write_Instruction = TRUE else CPU_Mem_Data_Write; -- Allows for loading program
+  Mem_Data_Write <= Instr_to_Mem when init = '1' else CPU_Mem_Data_Write; -- Allows for loading program
 	  
   process
-  begin
-	Write_Instruction <= true;  
+  begin  
     rst <= '1';
     wait until CLK = '1' and CLK'event;
 
@@ -89,7 +87,6 @@ begin
       Instr_to_Mem <= Instr_List(i);
     end loop; 
     wait until CLK = '1' and CLK'event;
-    Write_Instruction <= false;
     CS_TB <= '0'; WE_TB <= '0';
     init <= '0';
     wait until CLK = '1' and CLK'event;
