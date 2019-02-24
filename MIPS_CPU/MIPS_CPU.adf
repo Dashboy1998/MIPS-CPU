@@ -48,7 +48,7 @@ UCF=
 WindowVisible=0
 
 [HierarchyViewer]
-HierarchyInformation=mips_testbench|test|0   
+HierarchyInformation=mips_testbench|test|0
 ShowHide=ShowTopLevel
 Selected=
 
@@ -60,6 +60,7 @@ Testbench=1
 /REG.vhd=-1
 /MIPS.vhd=-1
 /Complete_MIPS.vhd=-1
+/HiLo_Register.vhd=-1
 Testbench/MIPS_Testbench.vhd=-1
 
 [Files.Data]
@@ -67,5 +68,6 @@ Testbench/MIPS_Testbench.vhd=-1
 .\src\REG.vhd=VHDL Source Code
 .\src\MIPS.vhd=VHDL Source Code
 .\src\Complete_MIPS.vhd=VHDL Source Code
+.\src\HiLo_Register.vhd=VHDL Source Code
 .\src\Testbench\MIPS_Testbench.vhd=VHDL Source Code
 
