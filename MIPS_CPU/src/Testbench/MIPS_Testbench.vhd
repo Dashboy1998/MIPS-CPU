@@ -100,8 +100,10 @@ begin
       wait until CLK = '0' and CLK'event;
       assert(to_integer(CPU_Mem_Data_Write) = expected(i))
 	  	report "Output mismatch:" severity error;
-    end loop;
-
-    report "Testing Finished:";
+    end loop; 
+	
+	assert false  
+    report "Testing Finished:"
+	severity failure;
   end process;
 end test;

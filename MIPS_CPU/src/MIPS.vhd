@@ -21,9 +21,8 @@ architecture structure of MIPS is
   component HiLo is
 	port(CLK: in std_logic;
 		 Write_HiLo: in unsigned(63 downto 0);
-		 Read_HiLoReg: out unsigned(31 downto 0);
-		 Write_En: in std_logic; 
-		 Read_HiLo: in std_logic);
+		 Read_HiLoReg: out unsigned(63 downto 0);
+		 Write_En: in std_logic);
 	end component;
   type Operation is (and1,or1,add,sub,slt,shr,shl,jr, mult, multu, div, divu, mfhi, mflo);
   signal Op, OpSave: Operation := and1;
@@ -38,8 +37,7 @@ architecture structure of MIPS is
   signal DR: unsigned(4 downto 0); 
   signal MulDivResult: unsigned(63 downto 0); -- 64bit result register 
   signal Write_MulDivResult: std_logic;
-  signal Read_HiLo: std_logic; -- Used to read Hi or Lo result
-  signal HiLoReg: unsigned(31 downto 0); -- Read High low register
+  signal HiLoReg: unsigned(63 downto 0); -- Read High low register
   signal State, nState : integer range 0 to 4 := 0;
   constant addi: unsigned(5 downto 0) := "001000";  -- 8 
   constant andi: unsigned(5 downto 0) := "001100";  -- 12
@@ -49,6 +47,10 @@ architecture structure of MIPS is
   constant beq:  unsigned(5 downto 0) := "000100";  -- 4
   constant bne:  unsigned(5 downto 0) := "000101";  -- 5
   constant jump: unsigned(5 downto 0) := "000010";  -- 2
+  constant mul:  unsigned(5 downto 0) := "011000";
+  constant mulu: unsigned(5 downto 0) := "011001";
+  constant di:	 unsigned(5 downto 0) := "011010";
+  constant diu:	 unsigned(5 downto 0) := "011011";
   alias opcode: unsigned(5 downto 0) is Instr(31 downto 26);
   alias SR1: unsigned(4 downto 0) is Instr(25 downto 21);
   alias SR2: unsigned(4 downto 0) is Instr(20 downto 16);
@@ -57,9 +59,12 @@ architecture structure of MIPS is
   alias ImmField: unsigned (15 downto 0) is Instr(15 downto 0);	
   alias Product: unsigned(63 downto 0) is MulDivResult(63 downto 0); -- Product in HiLo Register
   alias Quotient: unsigned(31 downto 0) is MulDivResult(31 downto 0); -- Quotient in Lo result register
-  alias Remainder: unsigned(31 downto 0) is MulDivResult(63 downto 32); -- Remainder in Hi result register 
+  alias Remainder: unsigned(31 downto 0) is MulDivResult(63 downto 32); -- Remainder in Hi result register
+  alias HiReg: unsigned(31 downto 0) is HiLoReg(63 downto 32);
+  alias LoReg: unsigned(31 downto 0) is HiLoReg(31 downto 0);
 begin
   A1: Reg port map (CLK, RegW, DR, SR1, SR2, Reg_In, ReadReg1, ReadReg2);
+  ResultReg: HiLo port map(CLK, MulDivResult, HiLoReg, Write_MulDivResult);   
   Imm_Ext <= x"FFFF" & Instr(15 downto 0) when Instr(15) = '1'
     else x"0000" & Instr(15 downto 0);  -- Sign extend immediate field
   DR <= Instr(15 downto 11) when Format = R
@@ -74,7 +79,7 @@ begin
   process(State, PC, Instr, Format, F_Code, opcode, Op, ALU_InA, ALU_InB,
           Imm_Ext)
   begin
-    FetchDorI <= '0'; CS <= '0'; WE <= '0'; RegW <= '0'; Writing <= '0';
+    FetchDorI <= '0'; CS <= '0'; WE <= '0'; RegW <= '0'; Writing <= '0'; Write_MulDivResult <= '0';
     ALU_Result <= "00000000000000000000000000000000";
     npc <= pc; Op <= jr; REGorIMM <= '0'; ALUorMEM <= '0';
     case state is
@@ -118,6 +123,16 @@ begin
         elsif OpSave = sub then ALU_Result <= ALU_InA - ALU_InB;
         elsif OpSave = shr then ALU_Result <= ALU_InB srl to_integer(numshift);
         elsif OpSave = shl then ALU_Result <= ALU_InB sll to_integer(numshift);
+		elsif OpSave = mult then Product <= unsigned(signed(ALU_InA) * signed(ALU_InB));
+		elsif OpSave = multu then Product <= ALU_InA * ALU_InB;
+		elsif OpSave = div then
+			Quotient <= unsigned(signed(ALU_InA) / signed(ALU_InB));
+			Remainder <= unsigned(signed(ALU_InA) REM signed(ALU_InB));
+		elsif OpSave = divu then
+			Quotient <= ALU_InA / ALU_InB;
+			Remainder <= ALU_InA REM ALU_InB;
+		elsif OpSave = mfhi then ALU_Result <= HiReg;
+		elsif OpSave = mflo then ALU_Result <= LoReg;
         elsif OpSave = slt then -- set on less than
           if ALU_InA < ALU_InB then ALU_Result <= X"00000001";
           else ALU_Result <= X"00000000";
@@ -130,8 +145,10 @@ begin
         elsif OpSave = jr then nPC <= ALU_InA; nState <= 0;
         end if;
       when 3 =>
-        nState <= 0;
-        if Format = R or Opcode = addi or Opcode = andi or Opcode = ori then
+	  	nState <= 0;
+	  	if OpCode = mul or OpCode = mulu or OpCode = di or OpCode = diu then
+			  Write_MulDivResult <= '1';
+        elsif Format = R or Opcode = addi or Opcode = andi or Opcode = ori then
           RegW <= '1'; 
         elsif Opcode = sw then CS <= '1'; WE <= '1'; Writing <= '1';
         elsif Opcode = lw then CS <= '1'; nState <= 4;
