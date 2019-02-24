@@ -18,6 +18,13 @@ architecture structure of MIPS is
          Reg_In: in unsigned(31 downto 0);
          ReadReg1, ReadReg2: out unsigned(31 downto 0));
   end component;
+  component HiLo is
+	port(CLK: in std_logic;
+		 Write_HiLo: in unsigned(63 downto 0);
+		 Read_HiLoReg: out unsigned(31 downto 0);
+		 Write_En: in std_logic; 
+		 Read_HiLo: in std_logic);
+	end component;
   type Operation is (and1,or1,add,sub,slt,shr,shl,jr, mult, multu, div, divu, mfhi, mflo);
   signal Op, OpSave: Operation := and1;
   type Instr_Format is (R, I, J);  -- (Arithmetic, Addr_Imm, Jump)
