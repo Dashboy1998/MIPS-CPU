@@ -29,7 +29,9 @@ architecture structure of MIPS is
   signal ALUorMEM, RegW, FetchDorI, Writing, REGorIMM: std_logic := '0';
   signal REGorIMM_Save, ALUorMEM_Save: std_logic := '0';
   signal DR: unsigned(4 downto 0); 
-  signal ResultReg: unsigned(63 downto 0); -- 64bit result register
+  signal Write_HiLo: unsigned(63 downto 0); -- 64bit result register 
+  signal Write_HiLo_En: std_logic;
+  signal Read_HiLo: std_logic; -- Used to read Hi or Lo result
   signal State, nState : integer range 0 to 4 := 0;
   constant addi: unsigned(5 downto 0) := "001000";  -- 8 
   constant andi: unsigned(5 downto 0) := "001100";  -- 12
@@ -45,8 +47,9 @@ architecture structure of MIPS is
   alias F_Code: unsigned(5 downto 0) is Instr(5 downto 0);
   alias NumShift: unsigned(4 downto 0) is Instr(10 downto 6);
   alias ImmField: unsigned (15 downto 0) is Instr(15 downto 0);	
-  alias Hi: unsigned(31 downto 0) is ResultReg(63 downto 32); -- Hi result register
-  alias Lo: unsigned(31 downto 0) is ResultReg(31 downto 0); -- Lo result register
+  alias Product: unsigned(63 downto 0) is Write_HiLo(63 downto 0); -- Product in HiLo Register
+  alias Quotient: unsigned(31 downto 0) is Write_HiLo(31 downto 0); -- Quotient in Lo result register
+  alias Remainder: unsigned(31 downto 0) is Write_HiLo(63 downto 32); -- Remainder in Hi result register 
 begin
   A1: Reg port map (CLK, RegW, DR, SR1, SR2, Reg_In, ReadReg1, ReadReg2);
   Imm_Ext <= x"FFFF" & Instr(15 downto 0) when Instr(15) = '1'
