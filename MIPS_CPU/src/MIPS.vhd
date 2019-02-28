@@ -146,7 +146,7 @@ begin
         end if;
       when 3 =>
 	  	nState <= 0;
-	  	if OpCode = mul or OpCode = mulu or OpCode = di or OpCode = diu then
+	  	if Format = R and (F_code = mul or F_code = mulu or F_code = di or F_code = diu) then
 			  Write_MulDivResult <= '1';
         elsif Format = R or Opcode = addi or Opcode = andi or Opcode = ori then
           RegW <= '1'; 
