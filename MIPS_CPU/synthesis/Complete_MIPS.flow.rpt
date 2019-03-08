@@ -1,5 +1,5 @@
 Flow report for Complete_MIPS
-Thu Mar 07 22:43:13 2019
+Fri Mar 08 12:56:34 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Thu Mar 07 22:43:13 2019       ;
+; Flow Status                     ; Successful - Fri Mar 08 12:56:34 2019       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Complete_MIPS                               ;
 ; Top-level Entity Name           ; Complete_MIPS                               ;
@@ -48,7 +48,7 @@ refer to the applicable agreement for further details.
 ; Device                          ; 5CSXFC6D6F31C7                              ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 3,229 / 41,910 ( 8 % )                      ;
-; Total registers                 ; 359                                         ;
+; Total registers                 ; 363                                         ;
 ; Total pins                      ; 57 / 499 ( 11 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 34,816 / 5,662,720 ( < 1 % )                ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/07/2019 22:39:53 ;
+; Start date & time ; 03/08/2019 12:52:45 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Complete_MIPS       ;
 +-------------------+---------------------+
@@ -94,7 +94,7 @@ refer to the applicable agreement for further details.
 ; BOARD_MODEL_TLINE_C_PER_LENGTH            ; 0                                                                            ; --            ; --          ; 1.2V                    ;
 ; BOARD_MODEL_TLINE_LENGTH                  ; 0                                                                            ; --            ; --          ; 1.2V                    ;
 ; BOARD_MODEL_TLINE_L_PER_LENGTH            ; 0                                                                            ; --            ; --          ; 1.2V                    ;
-; COMPILER_SIGNATURE_ID                     ; 233360586745395.155201639207656                                              ; --            ; --          ; --                      ;
+; COMPILER_SIGNATURE_ID                     ; 233360586745395.155206756507584                                              ; --            ; --          ; --                      ;
 ; EDA_GENERATE_POWER_INPUT_FILE             ; Off                                                                          ; --            ; --          ; eda_simulation          ;
 ; EDA_OUTPUT_DATA_FORMAT                    ; Vhdl                                                                         ; --            ; --          ; eda_simulation          ;
 ; EDA_OUTPUT_DATA_FORMAT                    ; None                                                                         ; --            ; --          ; eda_board_design_symbol ;
@@ -104,8 +104,8 @@ refer to the applicable agreement for further details.
 ; INCREMENTAL_COMPILATION_EXPORT_POST_FIT   ; Off                                                                          ; --            ; --          ; --                      ;
 ; INCREMENTAL_COMPILATION_EXPORT_POST_SYNTH ; Off                                                                          ; --            ; --          ; --                      ;
 ; INCREMENTAL_COMPILATION_EXPORT_ROUTING    ; -- (Not supported for targeted family)                                       ; --            ; --          ; --                      ;
-; MISC_FILE                                 ; pll1Mhz.cmp                                                                  ; --            ; --          ; --                      ;
-; MISC_FILE                                 ; pll1Mhz_sim/pll1Mhz.vho                                                      ; --            ; --          ; --                      ;
+; MAX_CORE_JUNCTION_TEMP                    ; 85                                                                           ; --            ; --          ; --                      ;
+; MIN_CORE_JUNCTION_TEMP                    ; 0                                                                            ; --            ; --          ; --                      ;
 ; OCP_HW_EVAL                               ; Disable                                                                      ; Enable        ; --          ; --                      ;
 ; OPTIMIZE_HOLD_TIMING                      ; IO Paths and Minimum TPD Paths                                               ; All Paths     ; --          ; --                      ;
 ; OUTPUT_IO_TIMING_FAR_END_VMEAS            ; Half Signal Swing                                                            ; --            ; --          ; --                      ;
@@ -115,9 +115,9 @@ refer to the applicable agreement for further details.
 ; PARTITION_COLOR                           ; -- (Not supported for targeted family)                                       ; --            ; --          ; Top                     ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL       ; -- (Not supported for targeted family)                                       ; --            ; --          ; Top                     ;
 ; PARTITION_NETLIST_TYPE                    ; -- (Not supported for targeted family)                                       ; --            ; --          ; Top                     ;
-; SPD_FILE                                  ; pll1Mhz.spd                                                                  ; --            ; --          ; --                      ;
-; SYNTHESIS_ONLY_QIP                        ; On                                                                           ; --            ; --          ; --                      ;
-; USER_LIBRARIES                            ; e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src ; --            ; --          ; --                      ;
+; POWER_BOARD_THERMAL_MODEL                 ; None (CONSERVATIVE)                                                          ; --            ; --          ; --                      ;
+; POWER_PRESET_COOLING_SOLUTION             ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                        ; --            ; --          ; --                      ;
+; USER_LIBRARIES                            ; E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src ; --            ; --          ; --                      ;
 +-------------------------------------------+------------------------------------------------------------------------------+---------------+-------------+-------------------------+
 
 
@@ -126,12 +126,12 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:25     ; 1.0                     ; 4971 MB             ; 00:00:36                           ;
-; Fitter                    ; 00:01:45     ; 1.4                     ; 6778 MB             ; 00:03:43                           ;
-; Assembler                 ; 00:00:31     ; 1.0                     ; 4899 MB             ; 00:00:31                           ;
-; TimeQuest Timing Analyzer ; 00:00:24     ; 2.2                     ; 5382 MB             ; 00:00:45                           ;
-; EDA Netlist Writer        ; 00:00:05     ; 1.0                     ; 4938 MB             ; 00:00:05                           ;
-; Total                     ; 00:03:10     ; --                      ; --                  ; 00:05:40                           ;
+; Analysis & Synthesis      ; 00:00:27     ; 1.0                     ; 4948 MB             ; 00:00:38                           ;
+; Fitter                    ; 00:01:52     ; 1.4                     ; 6787 MB             ; 00:03:44                           ;
+; Assembler                 ; 00:00:36     ; 1.0                     ; 4900 MB             ; 00:00:34                           ;
+; TimeQuest Timing Analyzer ; 00:00:26     ; 2.2                     ; 5384 MB             ; 00:00:47                           ;
+; EDA Netlist Writer        ; 00:00:06     ; 1.0                     ; 4935 MB             ; 00:00:05                           ;
+; Total                     ; 00:03:27     ; --                      ; --                  ; 00:05:48                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

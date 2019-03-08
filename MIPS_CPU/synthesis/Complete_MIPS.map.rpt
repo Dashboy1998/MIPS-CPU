@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Complete_MIPS
-Thu Mar 07 22:40:18 2019
+Fri Mar 08 12:53:12 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -15,29 +15,28 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis DSP Block Usage Summary
- 10. Analysis & Synthesis IP Cores Summary
- 11. State Machine - |Complete_MIPS|MIPS:CPU|OpSave
- 12. General Register Statistics
- 13. Inverted Register Statistics
- 14. Registers Packed Into Inferred Megafunctions
- 15. Registers Added for RAM Pass-Through Logic
- 16. Multiplexer Restructuring Statistics (Restructuring Performed)
- 17. Source assignments for Memory:MEM|altsyncram:RAM1_rtl_0|altsyncram_5hs1:auto_generated
- 18. Source assignments for MIPS:CPU|REG:A1|altsyncram:Regs_rtl_0|altsyncram_ojo1:auto_generated
- 19. Source assignments for MIPS:CPU|REG:A1|altsyncram:Regs_rtl_1|altsyncram_ojo1:auto_generated
- 20. Parameter Settings for User Entity Instance: pll1Mhz:PLL1|pll1Mhz_0002:pll1mhz_inst|altera_pll:altera_pll_i
- 21. Parameter Settings for Inferred Entity Instance: Memory:MEM|altsyncram:RAM1_rtl_0
- 22. Parameter Settings for Inferred Entity Instance: MIPS:CPU|REG:A1|altsyncram:Regs_rtl_0
- 23. Parameter Settings for Inferred Entity Instance: MIPS:CPU|REG:A1|altsyncram:Regs_rtl_1
- 24. Parameter Settings for Inferred Entity Instance: MIPS:CPU|lpm_divide:Div1
- 25. Parameter Settings for Inferred Entity Instance: MIPS:CPU|lpm_divide:Div0
- 26. Parameter Settings for Inferred Entity Instance: MIPS:CPU|lpm_divide:Mod1
- 27. Parameter Settings for Inferred Entity Instance: MIPS:CPU|lpm_divide:Mod0
- 28. altsyncram Parameter Settings by Entity Instance
- 29. Port Connectivity Checks: "pll1Mhz:PLL1"
- 30. Post-Synthesis Netlist Statistics for Top Partition
- 31. Elapsed Time Per Partition
- 32. Analysis & Synthesis Messages
+ 10. State Machine - |Complete_MIPS|MIPS:CPU|OpSave
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Registers Packed Into Inferred Megafunctions
+ 14. Registers Added for RAM Pass-Through Logic
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for Memory:MEM|altsyncram:RAM1_rtl_0|altsyncram_5hs1:auto_generated
+ 17. Source assignments for MIPS:CPU|REG:A1|altsyncram:Regs_rtl_0|altsyncram_ojo1:auto_generated
+ 18. Source assignments for MIPS:CPU|REG:A1|altsyncram:Regs_rtl_1|altsyncram_ojo1:auto_generated
+ 19. Parameter Settings for User Entity Instance: pll1Mhz:PLL1|pll1Mhz_0002:pll1mhz_inst|altera_pll:altera_pll_i
+ 20. Parameter Settings for Inferred Entity Instance: Memory:MEM|altsyncram:RAM1_rtl_0
+ 21. Parameter Settings for Inferred Entity Instance: MIPS:CPU|REG:A1|altsyncram:Regs_rtl_0
+ 22. Parameter Settings for Inferred Entity Instance: MIPS:CPU|REG:A1|altsyncram:Regs_rtl_1
+ 23. Parameter Settings for Inferred Entity Instance: MIPS:CPU|lpm_divide:Div1
+ 24. Parameter Settings for Inferred Entity Instance: MIPS:CPU|lpm_divide:Div0
+ 25. Parameter Settings for Inferred Entity Instance: MIPS:CPU|lpm_divide:Mod1
+ 26. Parameter Settings for Inferred Entity Instance: MIPS:CPU|lpm_divide:Mod0
+ 27. altsyncram Parameter Settings by Entity Instance
+ 28. Port Connectivity Checks: "pll1Mhz:PLL1"
+ 29. Post-Synthesis Netlist Statistics for Top Partition
+ 30. Elapsed Time Per Partition
+ 31. Analysis & Synthesis Messages
 
 
 
@@ -63,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Mar 07 22:40:17 2019       ;
+; Analysis & Synthesis Status     ; Successful - Fri Mar 08 12:53:12 2019       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; Complete_MIPS                               ;
 ; Top-level Entity Name           ; Complete_MIPS                               ;
@@ -194,15 +193,15 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path              ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                                                     ; Library ;
 +-----------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+---------+
-; ../src/Complete_MIPS.vhd                      ; yes             ; User VHDL File                                        ; e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd                                   ;         ;
-; ../src/Memory.vhd                             ; yes             ; User VHDL File                                        ; e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Memory.vhd                                          ;         ;
-; ../src/MIPS.vhd                               ; yes             ; User VHDL File                                        ; e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd                                            ;         ;
-; ../src/REG.vhd                                ; yes             ; User VHDL File                                        ; e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/REG.vhd                                             ;         ;
-; ../src/HiLo_Register.vhd                      ; yes             ; User VHDL File                                        ; e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/HiLo_Register.vhd                                   ;         ;
-; ../src/Program.vhd                            ; yes             ; User VHDL File                                        ; e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Program.vhd                                         ;         ;
-; ../src/HEX2Seven.vhd                          ; yes             ; User VHDL File                                        ; e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/HEX2Seven.vhd                                       ;         ;
-; pll1Mhz.vhd                                   ; yes             ; User Wizard-Generated File                            ; e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/pll1Mhz.vhd                                   ; pll1Mhz ;
-; pll1Mhz/pll1Mhz_0002.v                        ; yes             ; User Verilog HDL File                                 ; e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/pll1Mhz/pll1Mhz_0002.v                        ; pll1Mhz ;
+; pll1Mhz/pll1Mhz_0002.v                        ; yes             ; User Verilog HDL File                                 ; E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/pll1Mhz/pll1Mhz_0002.v                        ;         ;
+; pll1Mhz.vhd                                   ; yes             ; User Wizard-Generated File                            ; E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/pll1Mhz.vhd                                   ;         ;
+; ../src/Complete_MIPS.vhd                      ; yes             ; User VHDL File                                        ; E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd                                   ;         ;
+; ../src/Memory.vhd                             ; yes             ; User VHDL File                                        ; E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Memory.vhd                                          ;         ;
+; ../src/MIPS.vhd                               ; yes             ; User VHDL File                                        ; E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd                                            ;         ;
+; ../src/REG.vhd                                ; yes             ; User VHDL File                                        ; E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/REG.vhd                                             ;         ;
+; ../src/HiLo_Register.vhd                      ; yes             ; User VHDL File                                        ; E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/HiLo_Register.vhd                                   ;         ;
+; ../src/Program.vhd                            ; yes             ; User VHDL File                                        ; E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Program.vhd                                         ;         ;
+; ../src/HEX2Seven.vhd                          ; yes             ; User VHDL File                                        ; E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/HEX2Seven.vhd                                       ;         ;
 ; altera_pll.v                                  ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altera_pll.v                                                              ;         ;
 ; altsyncram.tdf                                ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf                                                            ;         ;
 ; stratix_ram_block.inc                         ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                     ;         ;
@@ -213,23 +212,23 @@ refer to the applicable agreement for further details.
 ; altrom.inc                                    ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altrom.inc                                                                ;         ;
 ; altram.inc                                    ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altram.inc                                                                ;         ;
 ; altdpram.inc                                  ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altdpram.inc                                                              ;         ;
-; db/altsyncram_5hs1.tdf                        ; yes             ; Auto-Generated Megafunction                           ; e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/altsyncram_5hs1.tdf                        ;         ;
-; db/complete_mips.ram0_memory_a0c6519c.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/complete_mips.ram0_memory_a0c6519c.hdl.mif ;         ;
-; db/altsyncram_ojo1.tdf                        ; yes             ; Auto-Generated Megafunction                           ; e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/altsyncram_ojo1.tdf                        ;         ;
-; db/complete_mips.ram0_reg_15692.hdl.mif       ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/complete_mips.ram0_reg_15692.hdl.mif       ;         ;
+; db/altsyncram_5hs1.tdf                        ; yes             ; Auto-Generated Megafunction                           ; E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/altsyncram_5hs1.tdf                        ;         ;
+; db/Complete_MIPS.ram0_Memory_a0c6519c.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/Complete_MIPS.ram0_Memory_a0c6519c.hdl.mif ;         ;
+; db/altsyncram_ojo1.tdf                        ; yes             ; Auto-Generated Megafunction                           ; E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/altsyncram_ojo1.tdf                        ;         ;
+; db/Complete_MIPS.ram0_REG_15692.hdl.mif       ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/Complete_MIPS.ram0_REG_15692.hdl.mif       ;         ;
 ; lpm_divide.tdf                                ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_divide.tdf                                                            ;         ;
 ; abs_divider.inc                               ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/abs_divider.inc                                                           ;         ;
 ; sign_div_unsign.inc                           ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                                       ;         ;
-; db/lpm_divide_3dm.tdf                         ; yes             ; Auto-Generated Megafunction                           ; e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/lpm_divide_3dm.tdf                         ;         ;
-; db/sign_div_unsign_9nh.tdf                    ; yes             ; Auto-Generated Megafunction                           ; e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/sign_div_unsign_9nh.tdf                    ;         ;
-; db/alt_u_div_o2f.tdf                          ; yes             ; Auto-Generated Megafunction                           ; e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/alt_u_div_o2f.tdf                          ;         ;
-; db/lpm_divide_rqo.tdf                         ; yes             ; Auto-Generated Megafunction                           ; e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/lpm_divide_rqo.tdf                         ;         ;
-; db/abs_divider_4dg.tdf                        ; yes             ; Auto-Generated Megafunction                           ; e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/abs_divider_4dg.tdf                        ;         ;
-; db/lpm_abs_4p9.tdf                            ; yes             ; Auto-Generated Megafunction                           ; e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/lpm_abs_4p9.tdf                            ;         ;
-; db/lpm_divide_65m.tdf                         ; yes             ; Auto-Generated Megafunction                           ; e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/lpm_divide_65m.tdf                         ;         ;
-; db/lpm_divide_85m.tdf                         ; yes             ; Auto-Generated Megafunction                           ; e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/lpm_divide_85m.tdf                         ;         ;
-; db/sign_div_unsign_bnh.tdf                    ; yes             ; Auto-Generated Megafunction                           ; e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/sign_div_unsign_bnh.tdf                    ;         ;
-; db/alt_u_div_s2f.tdf                          ; yes             ; Auto-Generated Megafunction                           ; e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/alt_u_div_s2f.tdf                          ;         ;
+; db/lpm_divide_3dm.tdf                         ; yes             ; Auto-Generated Megafunction                           ; E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/lpm_divide_3dm.tdf                         ;         ;
+; db/sign_div_unsign_9nh.tdf                    ; yes             ; Auto-Generated Megafunction                           ; E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/sign_div_unsign_9nh.tdf                    ;         ;
+; db/alt_u_div_o2f.tdf                          ; yes             ; Auto-Generated Megafunction                           ; E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/alt_u_div_o2f.tdf                          ;         ;
+; db/lpm_divide_rqo.tdf                         ; yes             ; Auto-Generated Megafunction                           ; E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/lpm_divide_rqo.tdf                         ;         ;
+; db/abs_divider_4dg.tdf                        ; yes             ; Auto-Generated Megafunction                           ; E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/abs_divider_4dg.tdf                        ;         ;
+; db/lpm_abs_4p9.tdf                            ; yes             ; Auto-Generated Megafunction                           ; E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/lpm_abs_4p9.tdf                            ;         ;
+; db/lpm_divide_65m.tdf                         ; yes             ; Auto-Generated Megafunction                           ; E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/lpm_divide_65m.tdf                         ;         ;
+; db/lpm_divide_85m.tdf                         ; yes             ; Auto-Generated Megafunction                           ; E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/lpm_divide_85m.tdf                         ;         ;
+; db/sign_div_unsign_bnh.tdf                    ; yes             ; Auto-Generated Megafunction                           ; E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/sign_div_unsign_bnh.tdf                    ;         ;
+; db/alt_u_div_s2f.tdf                          ; yes             ; Auto-Generated Megafunction                           ; E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/alt_u_div_s2f.tdf                          ;         ;
 +-----------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -299,8 +298,8 @@ refer to the applicable agreement for further details.
 ;    |Memory:MEM|                              ; 0 (0)               ; 0 (0)                     ; 32768             ; 0          ; 0    ; 0            ; |Complete_MIPS|Memory:MEM                                                                                               ; Memory              ; work         ;
 ;       |altsyncram:RAM1_rtl_0|                ; 0 (0)               ; 0 (0)                     ; 32768             ; 0          ; 0    ; 0            ; |Complete_MIPS|Memory:MEM|altsyncram:RAM1_rtl_0                                                                         ; altsyncram          ; work         ;
 ;          |altsyncram_5hs1:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 32768             ; 0          ; 0    ; 0            ; |Complete_MIPS|Memory:MEM|altsyncram:RAM1_rtl_0|altsyncram_5hs1:auto_generated                                          ; altsyncram_5hs1     ; work         ;
-;    |pll1Mhz:PLL1|                            ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Complete_MIPS|pll1Mhz:PLL1                                                                                             ; pll1Mhz             ; pll1mhz      ;
-;       |pll1Mhz_0002:pll1mhz_inst|            ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Complete_MIPS|pll1Mhz:PLL1|pll1Mhz_0002:pll1mhz_inst                                                                   ; pll1Mhz_0002        ; pll1Mhz      ;
+;    |pll1Mhz:PLL1|                            ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Complete_MIPS|pll1Mhz:PLL1                                                                                             ; pll1Mhz             ; work         ;
+;       |pll1Mhz_0002:pll1mhz_inst|            ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Complete_MIPS|pll1Mhz:PLL1|pll1Mhz_0002:pll1mhz_inst                                                                   ; pll1Mhz_0002        ; work         ;
 ;          |altera_pll:altera_pll_i|           ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Complete_MIPS|pll1Mhz:PLL1|pll1Mhz_0002:pll1mhz_inst|altera_pll:altera_pll_i                                           ; altera_pll          ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -330,15 +329,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Fixed Point Unsigned Multiplier   ; 5           ;
 ; Fixed Point Mixed Sign Multiplier ; 2           ;
 +-----------------------------------+-------------+
-
-
-+---------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                         ;
-+--------+--------------+---------+--------------+--------------+-----------------------------+-----------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance             ; IP Include File ;
-+--------+--------------+---------+--------------+--------------+-----------------------------+-----------------+
-; Altera ; altera_pll   ; 17.1    ; N/A          ; N/A          ; |Complete_MIPS|pll1Mhz:PLL1 ; pll1Mhz.vhd     ;
-+--------+--------------+---------+--------------+--------------+-----------------------------+-----------------+
 
 
 Encoding Type:  One-Hot
@@ -1321,7 +1311,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 96                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 103.90                      ;
-; Average LUT depth     ; 80.03                       ;
+; Average LUT depth     ; 80.02                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1330,7 +1320,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:11     ;
+; Top            ; 00:00:12     ;
 +----------------+--------------+
 
 
@@ -1340,43 +1330,43 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Mar 07 22:39:51 2019
+    Info: Processing started: Fri Mar 08 12:52:44 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_CPU -c Complete_MIPS
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file /documents/school/2019 spring/ece_543/labs/03/lab_03/mips_cpu/mips_cpu/src/complete_mips.vhd
-    Info (12022): Found design unit 1: Complete_MIPS-model File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 18
-    Info (12023): Found entity 1: Complete_MIPS File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file /documents/school/2019 spring/ece_543/labs/03/lab_03/mips_cpu/mips_cpu/src/memory.vhd
-    Info (12022): Found design unit 1: Memory-Internal File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Memory.vhd Line: 13
-    Info (12023): Found entity 1: Memory File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Memory.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file /documents/school/2019 spring/ece_543/labs/03/lab_03/mips_cpu/mips_cpu/src/mips.vhd
-    Info (12022): Found design unit 1: MIPS-structure File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 13
-    Info (12023): Found entity 1: MIPS File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file /documents/school/2019 spring/ece_543/labs/03/lab_03/mips_cpu/mips_cpu/src/reg.vhd
-    Info (12022): Found design unit 1: REG-Behavioral File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/REG.vhd Line: 13
-    Info (12023): Found entity 1: REG File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/REG.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file /documents/school/2019 spring/ece_543/labs/03/lab_03/mips_cpu/mips_cpu/src/hilo_register.vhd
-    Info (12022): Found design unit 1: HiLo-behavioral File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/HiLo_Register.vhd Line: 12
-    Info (12023): Found entity 1: HiLo File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/HiLo_Register.vhd Line: 5
-Info (12021): Found 1 design units, including 0 entities, in source file /documents/school/2019 spring/ece_543/labs/03/lab_03/mips_cpu/mips_cpu/src/program.vhd
-    Info (12022): Found design unit 1: mips_program File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Program.vhd Line: 5
-Info (12021): Found 2 design units, including 0 entities, in source file /documents/school/2019 spring/ece_543/labs/03/lab_03/mips_cpu/mips_cpu/src/hex2seven.vhd
-    Info (12022): Found design unit 1: HEX2Seven File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/HEX2Seven.vhd Line: 5
-    Info (12022): Found design unit 2: HEX2Seven-body File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/HEX2Seven.vhd Line: 9
-Info (12021): Found 2 design units, including 1 entities, in source file pll1mhz.vhd
-    Info (12022): Found design unit 1: pll1Mhz-rtl File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/pll1Mhz.vhd Line: 20
-    Info (12023): Found entity 1: pll1Mhz File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/pll1Mhz.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file pll1mhz/pll1mhz_0002.v
-    Info (12023): Found entity 1: pll1Mhz_0002 File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/pll1Mhz/pll1Mhz_0002.v Line: 2
+    Info (12023): Found entity 1: pll1Mhz_0002 File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/pll1Mhz/pll1Mhz_0002.v Line: 2
+Info (12021): Found 2 design units, including 1 entities, in source file pll1mhz.vhd
+    Info (12022): Found design unit 1: pll1Mhz-rtl File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/pll1Mhz.vhd Line: 20
+    Info (12023): Found entity 1: pll1Mhz File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/pll1Mhz.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /documents/school/2019 spring/ece_543/labs/03/lab_03/mips_cpu/mips_cpu/src/complete_mips.vhd
+    Info (12022): Found design unit 1: Complete_MIPS-model File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 18
+    Info (12023): Found entity 1: Complete_MIPS File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /documents/school/2019 spring/ece_543/labs/03/lab_03/mips_cpu/mips_cpu/src/memory.vhd
+    Info (12022): Found design unit 1: Memory-Internal File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Memory.vhd Line: 13
+    Info (12023): Found entity 1: Memory File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Memory.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /documents/school/2019 spring/ece_543/labs/03/lab_03/mips_cpu/mips_cpu/src/mips.vhd
+    Info (12022): Found design unit 1: MIPS-structure File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 13
+    Info (12023): Found entity 1: MIPS File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /documents/school/2019 spring/ece_543/labs/03/lab_03/mips_cpu/mips_cpu/src/reg.vhd
+    Info (12022): Found design unit 1: REG-Behavioral File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/REG.vhd Line: 13
+    Info (12023): Found entity 1: REG File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/REG.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /documents/school/2019 spring/ece_543/labs/03/lab_03/mips_cpu/mips_cpu/src/hilo_register.vhd
+    Info (12022): Found design unit 1: HiLo-behavioral File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/HiLo_Register.vhd Line: 12
+    Info (12023): Found entity 1: HiLo File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/HiLo_Register.vhd Line: 5
+Info (12021): Found 1 design units, including 0 entities, in source file /documents/school/2019 spring/ece_543/labs/03/lab_03/mips_cpu/mips_cpu/src/program.vhd
+    Info (12022): Found design unit 1: mips_program File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Program.vhd Line: 5
+Info (12021): Found 2 design units, including 0 entities, in source file /documents/school/2019 spring/ece_543/labs/03/lab_03/mips_cpu/mips_cpu/src/hex2seven.vhd
+    Info (12022): Found design unit 1: HEX2Seven File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/HEX2Seven.vhd Line: 5
+    Info (12022): Found design unit 2: HEX2Seven-body File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/HEX2Seven.vhd Line: 9
 Info (12127): Elaborating entity "Complete_MIPS" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at Complete_MIPS.vhd(51): object "CLK5" assigned a value but never read File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 51
-Info (12128): Elaborating entity "pll1Mhz" for hierarchy "pll1Mhz:PLL1" File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 53
-Info (12128): Elaborating entity "pll1Mhz_0002" for hierarchy "pll1Mhz:PLL1|pll1Mhz_0002:pll1mhz_inst" File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/pll1Mhz.vhd Line: 33
-Info (12128): Elaborating entity "altera_pll" for hierarchy "pll1Mhz:PLL1|pll1Mhz_0002:pll1mhz_inst|altera_pll:altera_pll_i" File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/pll1Mhz/pll1Mhz_0002.v Line: 88
+Warning (10036): Verilog HDL or VHDL warning at Complete_MIPS.vhd(51): object "CLK5" assigned a value but never read File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 51
+Info (12128): Elaborating entity "pll1Mhz" for hierarchy "pll1Mhz:PLL1" File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 53
+Info (12128): Elaborating entity "pll1Mhz_0002" for hierarchy "pll1Mhz:PLL1|pll1Mhz_0002:pll1mhz_inst" File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/pll1mhz.vhd Line: 33
+Info (12128): Elaborating entity "altera_pll" for hierarchy "pll1Mhz:PLL1|pll1Mhz_0002:pll1mhz_inst|altera_pll:altera_pll_i" File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/pll1Mhz/pll1Mhz_0002.v Line: 88
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
-Info (12130): Elaborated megafunction instantiation "pll1Mhz:PLL1|pll1Mhz_0002:pll1mhz_inst|altera_pll:altera_pll_i" File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/pll1Mhz/pll1Mhz_0002.v Line: 88
-Info (12133): Instantiated megafunction "pll1Mhz:PLL1|pll1Mhz_0002:pll1mhz_inst|altera_pll:altera_pll_i" with the following parameter: File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/pll1Mhz/pll1Mhz_0002.v Line: 88
+Info (12130): Elaborated megafunction instantiation "pll1Mhz:PLL1|pll1Mhz_0002:pll1mhz_inst|altera_pll:altera_pll_i" File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/pll1Mhz/pll1Mhz_0002.v Line: 88
+Info (12133): Instantiated megafunction "pll1Mhz:PLL1|pll1Mhz_0002:pll1mhz_inst|altera_pll:altera_pll_i" with the following parameter: File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/pll1Mhz/pll1Mhz_0002.v Line: 88
     Info (12134): Parameter "fractional_vco_multiplier" = "false"
     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
     Info (12134): Parameter "operation_mode" = "direct"
@@ -1437,28 +1427,28 @@ Info (12133): Instantiated megafunction "pll1Mhz:PLL1|pll1Mhz_0002:pll1mhz_inst|
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
-Info (12128): Elaborating entity "MIPS" for hierarchy "MIPS:CPU" File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 56
-Warning (10036): Verilog HDL or VHDL warning at MIPS.vhd(35): object "Writing" assigned a value but never read File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 35
-Warning (10492): VHDL Process Statement warning at MIPS.vhd(121): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 121
-Warning (10492): VHDL Process Statement warning at MIPS.vhd(122): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 122
-Warning (10492): VHDL Process Statement warning at MIPS.vhd(123): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 123
-Warning (10492): VHDL Process Statement warning at MIPS.vhd(124): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 124
-Warning (10492): VHDL Process Statement warning at MIPS.vhd(125): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 125
-Warning (10492): VHDL Process Statement warning at MIPS.vhd(126): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 126
-Warning (10492): VHDL Process Statement warning at MIPS.vhd(127): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 127
-Warning (10492): VHDL Process Statement warning at MIPS.vhd(128): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 128
-Warning (10492): VHDL Process Statement warning at MIPS.vhd(129): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 129
-Warning (10492): VHDL Process Statement warning at MIPS.vhd(132): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 132
-Warning (10492): VHDL Process Statement warning at MIPS.vhd(135): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 135
-Warning (10492): VHDL Process Statement warning at MIPS.vhd(136): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 136
-Warning (10492): VHDL Process Statement warning at MIPS.vhd(137): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 137
-Warning (10492): VHDL Process Statement warning at MIPS.vhd(146): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 146
-Warning (10492): VHDL Process Statement warning at MIPS.vhd(148): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 148
-Info (12128): Elaborating entity "REG" for hierarchy "MIPS:CPU|REG:A1" File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 66
-Info (12128): Elaborating entity "HiLo" for hierarchy "MIPS:CPU|HiLo:ResultReg" File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 67
-Info (12128): Elaborating entity "Memory" for hierarchy "Memory:MEM" File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 57
+Info (12128): Elaborating entity "MIPS" for hierarchy "MIPS:CPU" File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 56
+Warning (10036): Verilog HDL or VHDL warning at MIPS.vhd(35): object "Writing" assigned a value but never read File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 35
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(121): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 121
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(122): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 122
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(123): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 123
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(124): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 124
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(125): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 125
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(126): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 126
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(127): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 127
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(128): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 128
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(129): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 129
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(132): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 132
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(135): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 135
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(136): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 136
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(137): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 137
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(146): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 146
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(148): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 148
+Info (12128): Elaborating entity "REG" for hierarchy "MIPS:CPU|REG:A1" File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 66
+Info (12128): Elaborating entity "HiLo" for hierarchy "MIPS:CPU|HiLo:ResultReg" File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 67
+Info (12128): Elaborating entity "Memory" for hierarchy "Memory:MEM" File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 57
 Warning (19016): Clock multiplexers are found and protected
-    Warning (19017): Found clock multiplexer CLK File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 41
+    Warning (19017): Found clock multiplexer CLK File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 41
 Warning (276020): Inferred RAM node "MIPS:CPU|REG:A1|Regs_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Warning (276020): Inferred RAM node "MIPS:CPU|REG:A1|Regs_rtl_1" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Info (19000): Inferred 3 megafunctions from design logic
@@ -1512,10 +1502,10 @@ Info (19000): Inferred 3 megafunctions from design logic
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
         Info (286033): Parameter INIT_FILE set to db/Complete_MIPS.ram0_REG_15692.hdl.mif
 Info (278001): Inferred 4 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MIPS:CPU|Div1" File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 133
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MIPS:CPU|Div0" File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 130
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MIPS:CPU|Mod1" File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 134
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MIPS:CPU|Mod0" File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 131
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MIPS:CPU|Div1" File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 133
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MIPS:CPU|Div0" File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 130
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MIPS:CPU|Mod1" File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 134
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MIPS:CPU|Mod0" File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 131
 Info (12130): Elaborated megafunction instantiation "Memory:MEM|altsyncram:RAM1_rtl_0"
 Info (12133): Instantiated megafunction "Memory:MEM|altsyncram:RAM1_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -1535,7 +1525,9 @@ Info (12133): Instantiated megafunction "Memory:MEM|altsyncram:RAM1_rtl_0" with 
     Info (12134): Parameter "INIT_FILE" = "db/Complete_MIPS.ram0_Memory_a0c6519c.hdl.mif"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_5hs1.tdf
-    Info (12023): Found entity 1: altsyncram_5hs1 File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/altsyncram_5hs1.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_5hs1 File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/altsyncram_5hs1.tdf Line: 27
+Warning (113018): Width of data items in "Complete_MIPS.ram0_Memory_a0c6519c.hdl.mif" is greater than the memory width. Truncating data items to fit in memory. File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/Complete_MIPS.ram0_Memory_a0c6519c.hdl.mif Line: 10
+Critical Warning (127005): Memory depth (1024) in the design file differs from memory depth (4) in the Memory Initialization File "E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/Complete_MIPS.ram0_Memory_a0c6519c.hdl.mif" -- setting initial value for remaining addresses to 0 File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12130): Elaborated megafunction instantiation "MIPS:CPU|REG:A1|altsyncram:Regs_rtl_0"
 Info (12133): Instantiated megafunction "MIPS:CPU|REG:A1|altsyncram:Regs_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -1554,70 +1546,69 @@ Info (12133): Instantiated megafunction "MIPS:CPU|REG:A1|altsyncram:Regs_rtl_0" 
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "INIT_FILE" = "db/Complete_MIPS.ram0_REG_15692.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ojo1.tdf
-    Info (12023): Found entity 1: altsyncram_ojo1 File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/altsyncram_ojo1.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "MIPS:CPU|lpm_divide:Div1" File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 133
-Info (12133): Instantiated megafunction "MIPS:CPU|lpm_divide:Div1" with the following parameter: File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 133
+    Info (12023): Found entity 1: altsyncram_ojo1 File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/altsyncram_ojo1.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "MIPS:CPU|lpm_divide:Div1" File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 133
+Info (12133): Instantiated megafunction "MIPS:CPU|lpm_divide:Div1" with the following parameter: File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 133
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "32"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_3dm.tdf
-    Info (12023): Found entity 1: lpm_divide_3dm File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/lpm_divide_3dm.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_3dm File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/lpm_divide_3dm.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9nh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_9nh File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/sign_div_unsign_9nh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_9nh File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/sign_div_unsign_9nh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_o2f.tdf
-    Info (12023): Found entity 1: alt_u_div_o2f File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/alt_u_div_o2f.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "MIPS:CPU|lpm_divide:Div0" File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 130
-Info (12133): Instantiated megafunction "MIPS:CPU|lpm_divide:Div0" with the following parameter: File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 130
+    Info (12023): Found entity 1: alt_u_div_o2f File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/alt_u_div_o2f.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "MIPS:CPU|lpm_divide:Div0" File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 130
+Info (12133): Instantiated megafunction "MIPS:CPU|lpm_divide:Div0" with the following parameter: File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 130
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "32"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_rqo.tdf
-    Info (12023): Found entity 1: lpm_divide_rqo File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/lpm_divide_rqo.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_rqo File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/lpm_divide_rqo.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_4dg.tdf
-    Info (12023): Found entity 1: abs_divider_4dg File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/abs_divider_4dg.tdf Line: 26
+    Info (12023): Found entity 1: abs_divider_4dg File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/abs_divider_4dg.tdf Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_4p9.tdf
-    Info (12023): Found entity 1: lpm_abs_4p9 File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/lpm_abs_4p9.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "MIPS:CPU|lpm_divide:Mod1" File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 134
-Info (12133): Instantiated megafunction "MIPS:CPU|lpm_divide:Mod1" with the following parameter: File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 134
+    Info (12023): Found entity 1: lpm_abs_4p9 File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/lpm_abs_4p9.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "MIPS:CPU|lpm_divide:Mod1" File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 134
+Info (12133): Instantiated megafunction "MIPS:CPU|lpm_divide:Mod1" with the following parameter: File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 134
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "32"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_65m.tdf
-    Info (12023): Found entity 1: lpm_divide_65m File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/lpm_divide_65m.tdf Line: 24
-Info (12130): Elaborated megafunction instantiation "MIPS:CPU|lpm_divide:Mod0" File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 131
-Info (12133): Instantiated megafunction "MIPS:CPU|lpm_divide:Mod0" with the following parameter: File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 131
+    Info (12023): Found entity 1: lpm_divide_65m File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/lpm_divide_65m.tdf Line: 24
+Info (12130): Elaborated megafunction instantiation "MIPS:CPU|lpm_divide:Mod0" File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 131
+Info (12133): Instantiated megafunction "MIPS:CPU|lpm_divide:Mod0" with the following parameter: File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 131
     Info (12134): Parameter "LPM_WIDTHN" = "33"
     Info (12134): Parameter "LPM_WIDTHD" = "33"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_85m.tdf
-    Info (12023): Found entity 1: lpm_divide_85m File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/lpm_divide_85m.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_85m File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/lpm_divide_85m.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_bnh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_bnh File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/sign_div_unsign_bnh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_bnh File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/sign_div_unsign_bnh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_s2f.tdf
-    Info (12023): Found entity 1: alt_u_div_s2f File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/alt_u_div_s2f.tdf Line: 22
+    Info (12023): Found entity 1: alt_u_div_s2f File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/db/alt_u_div_s2f.tdf Line: 22
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 11
-    Warning (13410): Pin "HEX1[2]" is stuck at GND File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 11
-    Warning (13410): Pin "HEX1[1]" is stuck at GND File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 11
+    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 11
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 11
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 11
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 6 node(s), including 0 DDIO, 2 PLL, 0 transceiver and 0 LCELL
 Warning: OUTCLK port on the PLL is not properly connected on instance pll1Mhz:PLL1|pll1Mhz_0002:pll1mhz_inst|altera_pll:altera_pll_i|general[0].gpll. The output clock port on the PLL must be connected. File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altera_pll.v Line: 748
     Info: Must be connected
-Warning (21074): Design contains 8 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[3]" File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 8
-    Warning (15610): No output dependent on input pin "SW[4]" File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 8
-    Warning (15610): No output dependent on input pin "SW[5]" File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 8
-    Warning (15610): No output dependent on input pin "SW[6]" File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 8
-    Warning (15610): No output dependent on input pin "SW[7]" File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 8
-    Warning (15610): No output dependent on input pin "SW[8]" File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 8
-    Warning (15610): No output dependent on input pin "KEY[2]" File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 9
-    Warning (15610): No output dependent on input pin "KEY[3]" File: e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 9
+Warning (21074): Design contains 7 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[3]" File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 8
+    Warning (15610): No output dependent on input pin "SW[4]" File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 8
+    Warning (15610): No output dependent on input pin "SW[5]" File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 8
+    Warning (15610): No output dependent on input pin "SW[6]" File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 8
+    Warning (15610): No output dependent on input pin "SW[7]" File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 8
+    Warning (15610): No output dependent on input pin "SW[8]" File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 8
+    Warning (15610): No output dependent on input pin "KEY[2]" File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 9
 Info (21057): Implemented 6039 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 42 output pins
@@ -1625,10 +1616,10 @@ Info (21057): Implemented 6039 device resources after synthesis - the final reso
     Info (21064): Implemented 96 RAM segments
     Info (21065): Implemented 2 PLLs
     Info (21062): Implemented 6 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 36 warnings
-    Info: Peak virtual memory: 4971 megabytes
-    Info: Processing ended: Thu Mar 07 22:40:18 2019
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:37
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
+    Info: Peak virtual memory: 4948 megabytes
+    Info: Processing ended: Fri Mar 08 12:53:12 2019
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:39
 
 

@@ -1,6 +1,6 @@
 package require ::quartus::project
-project_open "e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/Complete_MIPS.qsf"
-set f [open "e:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/pin_assignments.qsf" w]
+project_open "E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/Complete_MIPS.qsf"
+set f [open "E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/pin_assignments.qsf" w]
 set asgn_col [get_all_instance_assignments -name *]
 
 foreach_in_collection asgn $asgn_col {
