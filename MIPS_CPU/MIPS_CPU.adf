@@ -48,7 +48,7 @@ UCF=
 WindowVisible=0
 
 [HierarchyViewer]
-HierarchyInformation=mips_testbench|test|0   
+HierarchyInformation=mips_testbench|test|0
 ShowHide=ShowTopLevel
 Selected=
 
@@ -62,6 +62,7 @@ Testbench=1
 /Memory.vhd=-1
 /MIPS.vhd=-1
 /Complete_MIPS.vhd=-1
+/HEX2Seven.vhd=-1
 Testbench/MIPS_Testbench.vhd=-1
 Testbench/testbench.asdb=-1
 Testbench/testbench.awc=-1
@@ -73,7 +74,8 @@ Testbench/testbench.awc=-1
 .\src\Memory.vhd=VHDL Source Code
 .\src\MIPS.vhd=VHDL Source Code
 .\src\Complete_MIPS.vhd=VHDL Source Code
+.\src\HEX2Seven.vhd=VHDL Source Code
 .\src\Testbench\MIPS_Testbench.vhd=VHDL Source Code
-
 .\src\Testbench\testbench.asdb=Accelerated Waveform File
 .\src\Testbench\testbench.awc=Accelerated Waveform Configuration
+
