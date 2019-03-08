@@ -1,6 +1,7 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
+use work.mips_program.all;
 
 entity MIPS_Testbench is
 end MIPS_Testbench;
@@ -20,7 +21,7 @@ architecture test of MIPS_Testbench is
 	   	 Mem_Data_Read: out unsigned(31 downto 0));
   end component;
   
-  constant N: integer := 8;
+  /*constant N: integer := 8;
   constant W: integer := 26;
   type Iarr is array(1 to W) of unsigned(31 downto 0);
   constant Instr_List: Iarr := (
@@ -50,7 +51,7 @@ architecture test of MIPS_Testbench is
     x"AC080045", -- sw $8, 69($0)   => Mem(69) = $8
     x"AC090046", -- sw $9, 70($0)   => Mem(70) = $9
     x"AC0A0047"  -- sw $10, 71($0)  => Mem(71) = $10
-);
+);	*/
     -- The last instructions perform a series of sw operations that store 
     -- registers 3-10 to memory. During the memory write stage, the testbench 
     -- will compare the value of these registers (by looking at the bus value) 
@@ -58,11 +59,13 @@ architecture test of MIPS_Testbench is
     -- instructions, however if a branch does not execute as expected, an error 
     -- will be detected because the assertion for the instruction after the 
     -- branch instruction will be incorrect.
-  type output_arr is array(1 to N) of integer;
-  constant expected: output_arr:= (24, 12, 2, 22, 1, 288, 3, 4268066);
+  --type output_arr is array(1 to N) of integer;
+  --constant expected: output_arr:= (24, 12, 2, 22, 1, 288, 3, 4268066);
   signal CS, WE, CLK: std_logic := '0';
   signal Instr_to_Mem, CPU_Mem_Data_Write, Mem_Data_Write, Mem_Data_Read, Address, AddressTB, Address_Mux: unsigned(31 downto 0);
-  signal RST, init, WE_Mux, CS_Mux, WE_TB, CS_TB: std_logic;
+  signal RST, init, WE_Mux, CS_Mux, WE_TB, CS_TB: std_logic; 
+  alias PC is 
+    <<signal CPU.PC : unsigned(31 downto 0)>>;
 begin
   CPU: MIPS port map (CLK, RST, CS, WE, Address, CPU_Mem_Data_Write, Mem_Data_Read);
   MEM: Memory port map (CS_Mux, WE_Mux, CLK, Address_Mux, Mem_Data_Write, Mem_Data_Read);
@@ -75,32 +78,40 @@ begin
 	  
   process
   begin  
-    rst <= '1';
+    /*rst <= '1';
     wait until CLK = '1' and CLK'event;
 
     --Initialize the instructions from the testbench
     init <= '1';
     CS_TB <= '1'; WE_TB <= '1';
-    for i in 1 to W loop
+    for i in 0 to 15 loop
       wait until CLK = '1' and CLK'event;
-      AddressTB <= to_unsigned(i-1,32);
+      AddressTB <= to_unsigned(i,32);
       Instr_to_Mem <= Instr_List(i);
     end loop; 
     wait until CLK = '1' and CLK'event;
     CS_TB <= '0'; WE_TB <= '0';
     init <= '0';
-    wait until CLK = '1' and CLK'event;
+    wait until CLK = '1' and CLK'event;*/
     rst <= '0';
     
-    for i in 1 to N loop
+    /*for i in 1 to N loop
       wait until WE = '1' and WE'event;  -- When a store word is executed
       wait until CLK = '0' and CLK'event;
       assert(to_integer(CPU_Mem_Data_Write) = expected(i))
 	  	report "Output mismatch:" severity error;
-    end loop; 
-	
+    end loop;*/ 
+	wait until PC = x"0000000F"; 
+	wait until CLK = '1' and CLK'event;
+	wait until CLK = '1' and CLK'event;	
+	wait until CLK = '1' and CLK'event;
+	wait until CLK = '1' and CLK'event;
+	wait until CLK = '1' and CLK'event;
+	wait until CLK = '1' and CLK'event;
+	wait until CLK = '1' and CLK'event;
+	wait until CLK = '1' and CLK'event;
 	assert false  
-    report "Testing Finished:"
+    	report "Testing Finished:"
 	severity failure;
   end process;
 end test;
