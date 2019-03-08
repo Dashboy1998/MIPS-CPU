@@ -50,7 +50,7 @@ architecture model of Complete_MIPS is
   signal displayData : unsigned(15 downto 0);
   signal CLK5, CLKpi : std_logic;
 begin
-  PLL1:	pll1Mhz port map(CLOCK_50, KEY(3), CLK5, CLOCK_1);	
+  PLL1:	pll1Mhz port map(CLOCK_50, not KEY(3), CLK5, CLOCK_1);	
   RST <= not KEY(1);
   CLK <= CLOCK_1 when SW(0) = '1' else KEY(0);
   CPU: MIPS port map (CLK, RST, CS, WE, ADDR, Mem_Data_Write, Mem_Data_Read);

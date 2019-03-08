@@ -2,6 +2,7 @@ library mips_cpu;
 library ieee;
 use mips_cpu.HEX2Seven.all;	
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 	-- Add your library and packages declaration here ...
 
@@ -37,6 +38,7 @@ architecture TB_ARCHITECTURE of complete_mips_tb is
 
 	-- Add your code here ...
 	alias Clk_1Mhz is <<signal UUT.CLOCK_1 : std_logic>>;
+	alias PC is <<signal UUT.CPU.PC : unsigned(31 downto 0)>>;
 begin
 
 	-- Unit Under Test port map
@@ -65,22 +67,114 @@ begin
 	
 	process
 	begin	
-		SW <= "0000000001";
-		KEY <= "1111";
+		-- Show Lower Address
+		SW <= "0000000001"; -- Use 1Mhz Clock
+		KEY <= "1111"; -- Reset
 		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
 		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
-		KEY <= "1101";
+		KEY <= "1101"; -- Reset
 		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
 		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;  
 		KEY <= "1111";
 		
-		for i in 0 to 20 loop -- About 1 instruction
-			wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
-			wait until Clk_1Mhz = '1' and Clk_1Mhz'event; 
-			wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
-			wait until Clk_1Mhz = '1' and Clk_1Mhz'event; 
-			wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
-		end loop;
+		wait until PC = x"0000000F";
+		
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event; 
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event; 
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		
+		-- Show Upper Address
+		SW <= "1000000001"; -- Use 1Mhz Clock
+		KEY <= "1111"; -- Reset
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		KEY <= "1101"; -- Reset
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;  
+		KEY <= "1111";
+		
+		wait until PC = x"0000000F";
+		
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event; 
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event; 
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		
+		-- Show Lower Data in MIPS
+		SW <= "0000000011"; -- Use 1Mhz Clock
+		KEY <= "1111"; -- Reset
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		KEY <= "1101"; -- Reset
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;  
+		KEY <= "1111";
+		
+		wait until PC = x"0000000F";
+		
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event; 
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event; 
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		
+		-- Show upper data into MIPS
+		SW <= "1000000011"; -- Use 1Mhz Clock
+		KEY <= "1111"; -- Reset
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		KEY <= "1101"; -- Reset
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;  
+		KEY <= "1111";
+		
+		wait until PC = x"0000000F";
+		
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event; 
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event; 
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		
+		-- Show lower data from MIPS
+		SW <= "0000000101"; -- Use 1Mhz Clock
+		KEY <= "1111"; -- Reset
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		KEY <= "1101"; -- Reset
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;  
+		KEY <= "1111";
+		
+		wait until PC = x"0000000F";
+		
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event; 
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event; 
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		
+		-- Show upper data from MIPS
+		SW <= "1000000101"; -- Use 1Mhz Clock
+		KEY <= "1111"; -- Reset
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		KEY <= "1101"; -- Reset
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;  
+		KEY <= "1111";
+		
+		wait until PC = x"0000000F";
+		
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event; 
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event; 
+		wait until Clk_1Mhz = '1' and Clk_1Mhz'event;
+		
 		assert false  
     	report "Testing Finished:"
 		severity failure;

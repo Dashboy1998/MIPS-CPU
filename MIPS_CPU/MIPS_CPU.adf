@@ -110,6 +110,8 @@ Testbench/MIPS_Testbench.vhd=-1
 Testbench/testbench.asdb=-1
 Testbench/testbench.awc=-1
 Testbench/complete_mips_TB_runtest.do=-1
+Testbench/Complete_MIPS.asdb=-1
+Testbench/Complete_MIPS.awc=-1
 PLL/pll1Mhz_0002.v=-1
 PLL/pll1Mhz.vhd=-1
 
@@ -126,6 +128,8 @@ PLL/pll1Mhz.vhd=-1
 .\src\Testbench\testbench.asdb=Accelerated Waveform File
 .\src\Testbench\testbench.awc=Accelerated Waveform Configuration
 .\src\Testbench\complete_mips_TB_runtest.do=Macro
+.\src\Testbench\Complete_MIPS.asdb=Accelerated Waveform File
+.\src\Testbench\Complete_MIPS.awc=Accelerated Waveform Configuration
 .\src\PLL\pll1Mhz_0002.v=Verilog Source Code
 .\src\PLL\pll1Mhz.vhd=VHDL Source Code
 
