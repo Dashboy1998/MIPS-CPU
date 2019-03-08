@@ -12,10 +12,9 @@ end Memory;
 
 architecture Internal of Memory is 
 type MEM is array (0 to 3)  of RAMtype(0 to 255);  
-signal RAM1: MEM := (program, values, weights, program);  
+signal RAM1: MEM := (program, values, weights, blank);  
 alias HighAdr is ADDR(9 downto 8);
 alias lowAddr is ADDR(7 downto 0);
-  --signal RAM1: RAMtype(0 to 1023) := (program & values & weights & program);
 begin
   process(Clk)
   begin

@@ -63,6 +63,8 @@ Testbench=1
 /MIPS.vhd=-1
 /Complete_MIPS.vhd=-1
 Testbench/MIPS_Testbench.vhd=-1
+Testbench/testbench.asdb=-1
+Testbench/testbench.awc=-1
 
 [Files.Data]
 .\src\REG.vhd=VHDL Source Code
@@ -73,3 +75,5 @@ Testbench/MIPS_Testbench.vhd=-1
 .\src\Complete_MIPS.vhd=VHDL Source Code
 .\src\Testbench\MIPS_Testbench.vhd=VHDL Source Code
 
+.\src\Testbench\testbench.asdb=Accelerated Waveform File
+.\src\Testbench\testbench.awc=Accelerated Waveform Configuration
