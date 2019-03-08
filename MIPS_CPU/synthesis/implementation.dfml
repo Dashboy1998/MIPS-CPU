@@ -1,0 +1,151 @@
+Info: *******************************************************************
+Info: Running Quartus Prime Shell
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details.
+    Info: Processing started: Thu Mar 07 22:16:59 2019
+Info: Command: quartus_sh --flow compile MIPS_CPU.qpf -c Complete_MIPS
+Info: Quartus(args): compile MIPS_CPU.qpf -c Complete_MIPS
+Info: Project Name = E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/MIPS_CPU
+Info: Revision Name = Complete_MIPS
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Thu Mar 07 22:17:02 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_CPU -c Complete_MIPS
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /documents/school/2019 spring/ece_543/labs/03/lab_03/mips_cpu/mips_cpu/src/complete_mips.vhd
+    Info (12022): Found design unit 1: Complete_MIPS-model File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 18
+    Info (12023): Found entity 1: Complete_MIPS File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /documents/school/2019 spring/ece_543/labs/03/lab_03/mips_cpu/mips_cpu/src/memory.vhd
+    Info (12022): Found design unit 1: Memory-Internal File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Memory.vhd Line: 13
+    Info (12023): Found entity 1: Memory File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Memory.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /documents/school/2019 spring/ece_543/labs/03/lab_03/mips_cpu/mips_cpu/src/mips.vhd
+    Info (12022): Found design unit 1: MIPS-structure File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 13
+    Info (12023): Found entity 1: MIPS File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /documents/school/2019 spring/ece_543/labs/03/lab_03/mips_cpu/mips_cpu/src/reg.vhd
+    Info (12022): Found design unit 1: REG-Behavioral File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/REG.vhd Line: 13
+    Info (12023): Found entity 1: REG File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/REG.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /documents/school/2019 spring/ece_543/labs/03/lab_03/mips_cpu/mips_cpu/src/hilo_register.vhd
+    Info (12022): Found design unit 1: HiLo-behavioral File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/HiLo_Register.vhd Line: 12
+    Info (12023): Found entity 1: HiLo File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/HiLo_Register.vhd Line: 5
+Info (12021): Found 1 design units, including 0 entities, in source file /documents/school/2019 spring/ece_543/labs/03/lab_03/mips_cpu/mips_cpu/src/program.vhd
+    Info (12022): Found design unit 1: mips_program File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Program.vhd Line: 5
+Info (12021): Found 2 design units, including 0 entities, in source file /documents/school/2019 spring/ece_543/labs/03/lab_03/mips_cpu/mips_cpu/src/hex2seven.vhd
+    Info (12022): Found design unit 1: HEX2Seven File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/HEX2Seven.vhd Line: 5
+    Info (12022): Found design unit 2: HEX2Seven-body File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/HEX2Seven.vhd Line: 9
+Info (12127): Elaborating entity "Complete_MIPS" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at Complete_MIPS.vhd(52): object "CLK50" assigned a value but never read File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 52
+Warning (10036): Verilog HDL or VHDL warning at Complete_MIPS.vhd(52): object "CLKpi" assigned a value but never read File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 52
+Info (12128): Elaborating entity "MIPS" for hierarchy "MIPS:CPU" File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 57
+Warning (10036): Verilog HDL or VHDL warning at MIPS.vhd(35): object "Writing" assigned a value but never read File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 35
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(120): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 120
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(121): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 121
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(122): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 122
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(123): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 123
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(124): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 124
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(125): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 125
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(126): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 126
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(127): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 127
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(128): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 128
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(131): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 131
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(134): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 134
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(135): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 135
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(136): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 136
+Warning (10492): VHDL Process Statement warning at MIPS.vhd(145): signal "OpSave" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 145
+Warning (10631): VHDL Process Statement warning at MIPS.vhd(79): inferring latch(es) for signal or variable "MulDivResult", which holds its previous value in one or more paths through the process File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[0]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[1]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[2]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[3]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[4]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[5]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[6]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[7]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[8]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[9]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[10]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[11]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[12]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[13]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[14]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[15]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[16]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[17]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[18]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[19]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[20]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[21]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[22]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[23]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[24]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[25]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[26]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[27]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[28]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[29]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[30]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[31]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[32]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[33]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[34]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[35]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[36]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[37]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[38]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[39]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[40]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[41]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[42]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[43]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[44]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[45]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[46]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[47]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[48]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[49]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[50]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[51]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[52]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[53]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[54]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[55]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[56]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[57]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[58]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[59]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[60]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[61]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[62]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (10041): Inferred latch for "MulDivResult[63]" at MIPS.vhd(79) File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 79
+Info (12128): Elaborating entity "REG" for hierarchy "MIPS:CPU|REG:A1" File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 66
+Info (12128): Elaborating entity "HiLo" for hierarchy "MIPS:CPU|HiLo:ResultReg" File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/MIPS.vhd Line: 67
+Info (12128): Elaborating entity "Memory" for hierarchy "Memory:MEM" File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 58
+Error (12006): Node instance "PLL1" instantiates undefined entity "pll_0002". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/src/Complete_MIPS.vhd Line: 54
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 19 warnings
+    Error: Peak virtual memory: 4855 megabytes
+    Error: Processing ended: Thu Mar 07 22:17:16 2019
+    Error: Elapsed time: 00:00:14
+    Error: Total CPU time (on all processors): 00:00:26
+Error (293001): Quartus Prime Full Compilation was unsuccessful. 3 errors, 19 warnings
+Error: Flow compile (for project E:/Documents/School/2019 Spring/ECE_543/Labs/03/Lab_03/MIPS_CPU/MIPS_CPU/synthesis/MIPS_CPU) was not successful
+Error: ERROR: Error(s) found while running an executable. See report file(s) for error message(s). Message log indicates which executable was run last.
+
+Error (23031): Evaluation of Tcl script c:/intelfpga_lite/17.1/quartus/common/tcl/internal/qsh_flow.tcl unsuccessful
+Error: Quartus Prime Shell was unsuccessful. 10 errors, 19 warnings
+    Error: Peak virtual memory: 4625 megabytes
+    Error: Processing ended: Thu Mar 07 22:17:16 2019
+    Error: Elapsed time: 00:00:17
+    Error: Total CPU time (on all processors): 00:00:03

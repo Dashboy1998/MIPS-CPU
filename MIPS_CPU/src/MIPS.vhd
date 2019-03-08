@@ -80,6 +80,7 @@ begin
           Imm_Ext)
   begin
     FetchDorI <= '0'; CS <= '0'; WE <= '0'; RegW <= '0'; Writing <= '0'; Write_MulDivResult <= '0';
+	MulDivResult <= "0000000000000000000000000000000000000000000000000000000000000000";
     ALU_Result <= "00000000000000000000000000000000";
     npc <= pc; Op <= jr; REGorIMM <= '0'; ALUorMEM <= '0';
     case state is
@@ -144,11 +145,12 @@ begin
         elsif opcode = bne or opcode = beq then nState <= 0;
         elsif OpSave = jr then nPC <= ALU_InA; nState <= 0;
         end if;
+		if (OpSave = mult or OpSave = multu or OpSave = div or OpSave = divu) then
+			 Write_MulDivResult <= '1';
+		end if;
       when 3 =>
 	  	nState <= 0;
-	  	if Format = R and (F_code = mul or F_code = mulu or F_code = di or F_code = diu) then
-			  Write_MulDivResult <= '1';
-        elsif Format = R or Opcode = addi or Opcode = andi or Opcode = ori then
+	  	if Format = R or Opcode = addi or Opcode = andi or Opcode = ori then
           RegW <= '1'; 
         elsif Opcode = sw then CS <= '1'; WE <= '1'; Writing <= '1';
         elsif Opcode = lw then CS <= '1'; nState <= 4;

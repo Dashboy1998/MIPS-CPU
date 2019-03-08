@@ -29,9 +29,16 @@ architecture model of Complete_MIPS is
          Mem_Data_Write: in unsigned(31 downto 0); 
 	   	 Mem_Data_Read: out unsigned(31 downto 0));
   end component;
+  component pll1Mhz
+  port(
+		refclk : in STD_LOGIC := '0';
+		rst : in STD_LOGIC := '0';
+		outclk_0 : out STD_LOGIC; -- 5Mhz
+		outclk_1 : out STD_LOGIC -- 1Mhz
+  );
+  end component;
   signal RST: std_logic; -- Reset Key
   signal CLK: std_logic; -- Selected Clock signal
-  --signal A_Out, D_Out: unsigned(31 downto 0); -- Data for Hex
   signal CS, WE: std_logic;
   signal ADDR, Mem_Data_Write, Mem_Data_Read: unsigned(31 downto 0); 
   signal CLOCK_1: std_logic; -- 1MHz clock from PLL
@@ -41,7 +48,9 @@ architecture model of Complete_MIPS is
   alias ul : std_logic is SW(9); -- Upper/Lower 
   alias sel : std_logic_vector(1 downto 0) is SW(2 downto 1);
   signal displayData : unsigned(15 downto 0);
+  signal CLK5, CLKpi : std_logic;
 begin
+  PLL1:	pll1Mhz port map(CLOCK_50, KEY(3), CLK5, CLOCK_1);	
   RST <= not KEY(1);
   CLK <= CLOCK_1 when SW(0) = '1' else KEY(0);
   CPU: MIPS port map (CLK, RST, CS, WE, ADDR, Mem_Data_Write, Mem_Data_Read);

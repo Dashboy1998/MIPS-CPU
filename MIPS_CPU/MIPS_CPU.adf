@@ -5,7 +5,7 @@ version=4
 Current Config=compile
 
 [Configurations]
-compile=MIPS_CPU
+compile=mips_cpu
 
 [Library]
 MIPS_CPU=.\MIPS_CPU\MIPS_CPU.lib
@@ -19,7 +19,7 @@ AccessReadWriteSLP=0
 AccessReadTopLevel=1
 DisableC=1
 ENABLE_ADV_DATAFLOW=0
-RUN_MODE_SYNTH=0
+RUN_MODE_SYNTH=1
 FLOW_TYPE=HDL
 LANGUAGE=VHDL
 REFRESH_FLOW=1
@@ -28,7 +28,15 @@ ON_SERVERFARM_SYNTH=0
 ON_SERVERFARM_IMPL=0
 ON_SERVERFARM_SIM=0
 DVM_DISPLAY=NO
-fileopenfolder=E:\Documents\School\2019 Spring\ECE_543\Labs\03\Lab_03\MIPS_CPU\MIPS_CPU\src
+fileopenfolder=E:\Documents\School\2019 Spring\ECE_543\Labs\03\Lab_03\MIPS_CPU\MIPS_CPU\synthesis\pll1Mhz
+SYNTH_STATUS=none
+IMPL_TOOL=
+SYNTH_TOOL=MV_QUARTUS_SYNTHESIS171
+CSYNTH_TOOL=
+PHYSSYNTH_TOOL=
+FAMILY=Quartus CycloneV
+IMPL_STATUS=none
+VerilogDirsChanged=0
 
 [LocalVerilogSets]
 EnableSLP=1
@@ -43,39 +51,81 @@ Active_lib=
 
 [IMPLEMENTATION]
 UCF=
+DEVICE_TECHNOLOGY_MIGRATION_LIST=
+LAST_RUN=1552015194
 
 [SpecTracer]
 WindowVisible=0
 
 [HierarchyViewer]
-HierarchyInformation=mips_testbench|test|0
+HierarchyInformation=complete_mips_tb|testbench_for_complete_mips|1 
 ShowHide=ShowTopLevel
 Selected=
 
+[SYNTHESIS]
+FAMILY=Quartus CycloneV
+DEVICE=5CSXFC6D6F31C
+SPEED=7
+TOPLEVEL=Complete_MIPS
+JOB_DESCRIPTION=SynthesisTask
+JOB_SFM_RESOURCE=
+ENABLE_SIGNALTAP=0
+SERVERFARM_INCLUDE_INPUT_FILES=*.*
+SERVERFARM_EXCLUDE_INPUT_FILES=
+OVERWRITE_PROJECT=1
+AUTO_CLOSE=0
+QSF_FILE_SELECTION=synthesis/Complete_MIPS.qsf
+CHECK_PROJECT_OUTPUT_DIRECTORY=0
+CHECK_OPTIMIZE_HOLD_TIMING=1
+USE_SIGNALTAP_FILE=
+ENABLE_LOGIC_ANALYZER_INTERFACE=0
+USE_LOGIC_ANALYZER_INTERFACE_FILE=
+OLD_FAMILY=Quartus CycloneV
+CHECK_IMPORT_PIN_ASSIGNMENTS=1
+IMPORT_PIN_ASSIGNMENTS=.\..\Complete_MIPS.qsf
+CHECK_GENERATE_FPGA_EXCHANGE_FILE=0
+GENERATE_FPGA_EXCHANGE_FILE=.\symbols\fpgaxchange
+BTM_IO_STANDARD=1.2V
+DEFAULT_QUARTUS_SETTINGS_FILE=C:\intelFPGA_lite\17.1\quartus\bin64\assignment_defaults.qdf
+OUTPUT_IO_TIMING_NEAR_END_VMEAS_RISE=Half Signal Swing
+OUTPUT_IO_TIMING_NEAR_END_VMEAS_FALL=Half Signal Swing
+OUTPUT_IO_TIMING_FAR_END_VMEAS_RISE=Half Signal Swing
+OUTPUT_IO_TIMING_FAR_END_VMEAS_FALL=Half Signal Swing
+LAST_RUN=1552015194
+
 [Groups]
 Testbench=1
+PLL=1
 
 [Files]
-/REG.vhd=-1
 /Program.vhd=-1
-/HiLo_Register.vhd=-1
-/Memory.vhd=-1
-/MIPS.vhd=-1
-/Complete_MIPS.vhd=-1
+/REG.vhd=-1
 /HEX2Seven.vhd=-1
+/HiLo_Register.vhd=-1
+/Complete_MIPS.vhd=-1
+/MIPS.vhd=-1
+/Memory.vhd=-1
+Testbench/complete_mips_TB.vhd=-1
 Testbench/MIPS_Testbench.vhd=-1
 Testbench/testbench.asdb=-1
 Testbench/testbench.awc=-1
+Testbench/complete_mips_TB_runtest.do=-1
+PLL/pll1Mhz_0002.v=-1
+PLL/pll1Mhz.vhd=-1
 
 [Files.Data]
-.\src\REG.vhd=VHDL Source Code
 .\src\Program.vhd=VHDL Source Code
-.\src\HiLo_Register.vhd=VHDL Source Code
-.\src\Memory.vhd=VHDL Source Code
-.\src\MIPS.vhd=VHDL Source Code
-.\src\Complete_MIPS.vhd=VHDL Source Code
+.\src\REG.vhd=VHDL Source Code
 .\src\HEX2Seven.vhd=VHDL Source Code
+.\src\HiLo_Register.vhd=VHDL Source Code
+.\src\Complete_MIPS.vhd=VHDL Source Code
+.\src\MIPS.vhd=VHDL Source Code
+.\src\Memory.vhd=VHDL Source Code
+.\src\Testbench\complete_mips_TB.vhd=VHDL Test Bench
 .\src\Testbench\MIPS_Testbench.vhd=VHDL Source Code
 .\src\Testbench\testbench.asdb=Accelerated Waveform File
 .\src\Testbench\testbench.awc=Accelerated Waveform Configuration
+.\src\Testbench\complete_mips_TB_runtest.do=Macro
+.\src\PLL\pll1Mhz_0002.v=Verilog Source Code
+.\src\PLL\pll1Mhz.vhd=VHDL Source Code
 
